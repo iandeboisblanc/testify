@@ -13,7 +13,8 @@ describe('the todo.App', function() {
 describe('the todo.util methods', function() {
   describe('trimTodoName', function () {
     it('should trim whitespace off input', function () {
-      //test here
+      var result = todo.util.trimTodoName('  abc   ');
+      expect(result).to.have.length(3);
     });
   });
   describe('isValidTodoName', function () {
@@ -27,8 +28,10 @@ describe('the todo.util methods', function() {
     });
   });
   describe('getUniqueId', function () {
-    it('should return an id value', function () {
-      //test here
+    it('should return a unique id value', function () {
+      var id1 = todo.util.getUniqueId();
+      var id2 = todo.util.getUniqueId();
+      expect(id1).to.not.equal(id2);
     })
   })
 });
