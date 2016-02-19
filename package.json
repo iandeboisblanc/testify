@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "casperjs": "^1.1.0-beta3",
-    "express": "~3.4.4"
+    "express": "~3.4.4",
+    "sinon": "^1.17.3"
   }
 }
